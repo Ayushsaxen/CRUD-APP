@@ -1,0 +1,44 @@
+{{>header}}
+<title>CRUD APP | Update</title>
+{{>navbar}}
+<div class="container-fluid mt-2">
+    <h5 class="background text-light text-center p-2">Update Employee Record</h5>
+    <form action="/update/{{data._id}}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required name="name" placeholder="Enter Full Name : " value="{{data.name}}">
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6 col-12">
+                <label class="form-label">Designation</label>
+                <input type="text" class="form-control" required name="dsg" placeholder="Enter Designation : " value="{{data.dsg}}" >
+            </div>
+            <div class="col-md-6 col-12">
+                <label class="form-label">Salary</label>
+                <input type="number" class="form-control" required name="salary" placeholder="Enter Salary : "value="{{data.salary}}">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6 col-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" required name="email" placeholder="Enter Email Address : "value="{{data.email}}">
+            </div>
+            <div class="col-md-6 col-12">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" required name="phone" placeholder="Enter Phone Number : "value="{{data.phone}}">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6 col-12">
+                <label class="form-label">City</label>
+                <input type="text" class="form-control" name="city" placeholder="Enter City Name : "value="{{data.city}}">
+            </div>
+            <div class="col-md-6 col-12">
+                <label class="form-label">State</label>
+                <input type="text" class="form-control" name="state" placeholder="Enter State Name : "value="{{data.state}}">
+            </div>
+        </div>
+        <button type="submit" class="background text-light btn-sm border-0 w-100 rounded">Update</button>
+    </form>
+</div>
+{{>footer}}

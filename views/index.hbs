@@ -1,0 +1,37 @@
+{{>header}}
+    <title>CRUD APP | Home</title>
+{{>navbar}}
+<div class="container-fluid mt-3">
+    <h5 class="background text-light text-center p-2">Employee Record</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Salary</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>City</th>
+                <th>State</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {{#each data}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{name}}</td>
+                <td>{{dsg}}</td>
+                <td>{{salary}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td>{{city}}</td>
+                <td>{{state}}</td>
+                <td><a href="update?_id={{_id}}"><i class="bi bi-pencil-fill"></i></a></td>
+                <td><a href="delete/{{_id}}"><i class="bi bi-trash"></i></a></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+</div>
+{{>footer}}
